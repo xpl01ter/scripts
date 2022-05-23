@@ -2,7 +2,7 @@
 
 SetBatchLines, -1
 
-F1::
++>Ins::
 
 ToolTip, Gravação iniciada...
 
@@ -26,7 +26,7 @@ return
 
 #if fimGravacao = true
 
-F2::
++>Home::
 fimTecla := true
 fimGravacao = false
 MsgBox, 64, Sucesso, Gravação concluída!
@@ -36,10 +36,10 @@ return
 
 #if replayLigado = true
 
-F3::
++>PgUp::
 InputBox, repeticao, Replay, Número de repetições,, 200, 130
 if (!ErrorLevel)
-{	
+{
 	if repeticao is Integer
 	{
 		ToolTip, Reproduzindo gravação...
@@ -65,6 +65,66 @@ ToolTip
 return
 
 #if fimGravacao = true
+
+~$F1::
+ToolTip, F1
+teclas.Push("{F1}")
+return
+
+~$F2::
+ToolTip, F2
+teclas.Push("{F2}")
+return
+
+~$F3::
+ToolTip, F3
+teclas.Push("{F3}")
+return
+
+~$F4::
+ToolTip, F4
+teclas.Push("{F4}")
+return
+
+~$F5::
+ToolTip, F5
+teclas.Push("{F5}")
+return
+
+~$F6::
+ToolTip, F6
+teclas.Push("{F6}")
+return
+
+~$F7::
+ToolTip, F7
+teclas.Push("{F7}")
+return
+
+~$F8::
+ToolTip, F8
+teclas.Push("{F8}")
+return
+
+~$F9::
+ToolTip, F9
+teclas.Push("{F9}")
+return
+
+~$F10::
+ToolTip, F10
+teclas.Push("{F10}")
+return
+
+~$F11::
+ToolTip, F11
+teclas.Push("{F11}")
+return
+
+~$F12::
+ToolTip, F12
+teclas.Push("{F12}")
+return
 
 ~$Home::
 ToolTip, Home
@@ -156,6 +216,66 @@ return
 ~$*Right::
 ToolTip, Ctrl + Shift + Right
 teclas.Push("{Ctrl Down}{Shift Down}{Right}{Ctrl Up}{Shift Up}")
+return
+
+~$*F1::
+ToolTip, F1
+teclas.Push("{F1}")
+return
+
+~$*F2::
+ToolTip, F2
+teclas.Push("{F2}")
+return
+
+~$*F3::
+ToolTip, F3
+teclas.Push("{F3}")
+return
+
+~$*F4::
+ToolTip, F4
+teclas.Push("{F4}")
+return
+
+~$*F5::
+ToolTip, F5
+teclas.Push("{F5}")
+return
+
+~$*F6::
+ToolTip, F6
+teclas.Push("{F6}")
+return
+
+~$*F7::
+ToolTip, F7
+teclas.Push("{F7}")
+return
+
+~$*F8::
+ToolTip, F8
+teclas.Push("{F8}")
+return
+
+~$*F9::
+ToolTip, F9
+teclas.Push("{F9}")
+return
+
+~$*F10::
+ToolTip, F10
+teclas.Push("{F10}")
+return
+
+~$*F11::
+ToolTip, F11
+teclas.Push("{F11}")
+return
+
+~$*F12::
+ToolTip, F12
+teclas.Push("{F12}")
 return
 
 ~$*Home::
